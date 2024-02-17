@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KategoriProdukController;
+use App\Http\Controllers\MejaController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Redirect;
@@ -16,6 +17,10 @@ Route::post('/master/kategoriproduk', [KategoriProdukController::class, 'store']
 Route::patch('/master/kategoriproduk/{id}', [KategoriProdukController::class, 'update'])->name('masterkategori.update');
 Route::delete('/master/kategoriproduk/{id}', [KategoriProdukController::class, 'delete'])->name('masterkategori.delete');
 
+// Routing Master Meja
+Route::get('/master/meja', [MejaController::class, 'index'])->name('mastermeja.index');
+Route::post('/master/meja', [MejaController::class, 'store'])->name('mastermeja.store');
+Route::delete('/master/meja/{id}', [MejaController::class, 'delete'])->name('mastermeja.delete');
 
 // Routing Product
 Route::get('/produk', [ProductController::class, 'index'])->name('product.index');

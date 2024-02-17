@@ -22,6 +22,9 @@
                     <li class="{{ Str::startsWith(request()->url(), route('masterkategoriproduk.index')) ? 'mm-active' : '' }}">
                         <a href="{{ route('masterkategoriproduk.index') }}" class="{{ Str::startsWith(request()->url(), route('masterkategoriproduk.index')) ? 'mm-active' : '' }}">Kategori Produk</a>
                     </li>
+                    <li class="{{ Str::startsWith(request()->url(), route('mastermeja.index')) ? 'mm-active' : '' }}">
+                        <a href="{{ route('mastermeja.index') }}" class="{{ Str::startsWith(request()->url(), route('mastermeja.index')) ? 'mm-active' : '' }}">Meja</a>
+                    </li>
                 </ul>
             </li>
         </ul>
