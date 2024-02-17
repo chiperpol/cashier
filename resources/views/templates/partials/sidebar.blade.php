@@ -7,6 +7,12 @@
                     <span class="nav-text">Product</span>
                 </a>
             </li>
+            <li class="{{ Str::startsWith(request()->url(), route('order.index')) ? 'mm-active' : '' }}">
+                <a href="{{ route('order.index') }}" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-notepad"></i>
+                    <span class="nav-text">Order</span>
+                </a>
+            </li>
             <li class="{{ Str::startsWith(request()->url(), route('masterkategoriproduk.index')) ? 'mm-active' : '' }}">
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-network"></i>

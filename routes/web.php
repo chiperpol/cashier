@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KategoriProdukController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Redirect;
 
@@ -21,6 +22,9 @@ Route::get('/produk', [ProductController::class, 'index'])->name('product.index'
 Route::post('/produk', [ProductController::class, 'store'])->name('product.store');
 Route::patch('/produk/{id}', [ProductController::class, 'update'])->name('product.update');
 Route::delete('/produk/{id}', [ProductController::class, 'delete'])->name('product.delete');
+
+// Routing Product
+Route::get('/order', [OrderController::class, 'index'])->name('order.index');
 
 
 
