@@ -32,6 +32,25 @@ class MejaController extends Controller
         return redirect()->route('mastermeja.index');
     }
 
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'namaMeja' => 'required|string',
+            'lantai' => 'required|in:1,2,3',
+            'status' => 'required|in:0,1',
+        ]);
+
+        $meja = MasterMeja::findOrFail($id);
+
+        $meja->namaMeja = $request->namaMeja;
+        $meja->lantai = $request->lantai;
+        $meja->status = $request->status;
+        $meja->save();
+
+        return redirect()->route('mastermeja.index');
+
+    }
+
     public function delete($id)
     {
         $data = MasterMeja::find($id);

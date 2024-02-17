@@ -20,6 +20,7 @@ Route::delete('/master/kategoriproduk/{id}', [KategoriProdukController::class, '
 // Routing Master Meja
 Route::get('/master/meja', [MejaController::class, 'index'])->name('mastermeja.index');
 Route::post('/master/meja', [MejaController::class, 'store'])->name('mastermeja.store');
+Route::patch('/master/meja/{id}', [MejaController::class, 'update'])->name('mastermeja.update');
 Route::delete('/master/meja/{id}', [MejaController::class, 'delete'])->name('mastermeja.delete');
 
 // Routing Product
